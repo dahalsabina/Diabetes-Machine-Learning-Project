@@ -19,3 +19,25 @@ Check for missing values -> there were no missing values
 One Hot Vector -> applied one hot encoding to ['gender', 'smoking_history']
 Standardization -> standardized the following quantitative variables ['age', 'bmi', 'HbA1c_level', 'blood_glucose_level']
 Split Train, Dev, and Test Set -> used 80,000 for train, 10,000 for dev, and 10,000 for test
+
+**Training Models:**
+
+We fit our data to five algorithms and the recall values for class 1 (Diabetes) are as follows:
+
+SGD Classifier: 0.716
+Logistic Regression: 0.6
+SVC Classifier: 0.825
+KNeighbors: 0.63
+Decision Tree: 0.728
+We will continue with the two models with the highest recall scores -> SVC and Decision Tree
+
+**Hypertuning Parameters:**
+
+**Decision Tree**
+
+The best score: 0.736664303438497
+The best hyperparameters: {'criterion': 'entropy', 'max_depth': 40, 'min_samples_split': 2, 'random_state': 42}
+Accuracy: 0.9551
+Precision: 0.856671848722498
+Recall: 0.8644210977011957
+F1 Score: 0.8604930436829215
